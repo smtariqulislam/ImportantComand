@@ -1,0 +1,3 @@
+// file change extention.
+
+for /R %x in (*.txt) do ren "%x" *.renamed
