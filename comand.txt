@@ -1,3 +1,17 @@
 // All file extention change in folder.
 
 for /R %x in (*.txt) do ren "%x" *.renamed
+
+
+// node version control.
+
+nvm --v
+
+nvm install 
+
+nvm use 
+
+
+
+
+
