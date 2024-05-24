@@ -1,4 +1,4 @@
-// All file extention change in folder.
+// All file extensions change in the folder.
 
 for /R %x in (*.txt) do ren "%x" *.renamed
 
@@ -10,6 +10,15 @@ nvm --v
 nvm install 
 
 nvm use 
+
+
+//Windows 11 or 10 cleanup
+
+press window + R; then write prefetch, temp, %temp%
+
+
+
+
 
 
 
