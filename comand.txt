@@ -18,6 +18,29 @@ press window + R; then write prefetch, temp, %temp%
 
 
 
+// Column Name change
+
+
+EXEC sp_rename 'AuditPreviousYearBranch.BranchId', 'BranchName', 'COLUMN';
+
+//
+
+
+// SQL
+
+// Changing a Column's Data Type or Modifying Properties
+
+ALTER TABLE TableName
+ALTER COLUMN ColumnName NewDataType;
+
+
+// Adding a New Column
+
+ALTER TABLE TableName
+ADD NewColumnName DataType;
+
+
+
 
 
 
