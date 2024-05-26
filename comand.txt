@@ -1,43 +1,38 @@
 // All file extensions change in the folder.
-
 for /R %x in (*.txt) do ren "%x" *.renamed
 
 
 // node version control.
-
 nvm --v
-
 nvm install 
-
-nvm use 
+nvm use
 
 
 //Windows 11 or 10 cleanup
-
 press window + R; then write prefetch, temp, %temp%
 
 
+// ------ SQL-------
 
 // Column Name change
-
-
 EXEC sp_rename 'AuditPreviousYearBranch.BranchId', 'BranchName', 'COLUMN';
 
-//
-
-
-// SQL
-
 // Changing a Column's Data Type or Modifying Properties
-
 ALTER TABLE TableName
 ALTER COLUMN ColumnName NewDataType;
 
-
 // Adding a New Column
-
 ALTER TABLE TableName
 ADD NewColumnName DataType;
+
+
+// ------- git -----------
+
+// Fetch the latest branches from the remote repository:
+git fetch
+
+//Check if the remote branch exists:
+git branch -r
 
 
 
