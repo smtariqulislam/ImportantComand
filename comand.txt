@@ -35,6 +35,13 @@ git fetch
 git branch -r
 
 
+// Regular delete (if merged):
+git branch -d feature-branch
+
+// Force delete (if not merged):
+git branch -D feature-branch
+
+
 
 
 
