@@ -43,6 +43,11 @@ git branch -d feature-branch
 git branch -D feature-branch
 
 
+// base any branch to create another branch.
+git checkout -b new-branch-name feature/-HrEmployeePDFGenerate
+
+
+
 
 
 
