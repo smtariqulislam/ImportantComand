@@ -28,7 +28,8 @@ ADD NewColumnName DataType;
 
 // ------- git -----------
 
-// Fetch the latest branches from the remote repository:
+// Fetch the latest branches from the remote repository.
+// ( if exits another developer branch then you use this command.
 git fetch
 
 //Check if the remote branch exists:
