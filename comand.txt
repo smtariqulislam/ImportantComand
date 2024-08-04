@@ -25,6 +25,10 @@ ALTER COLUMN ColumnName NewDataType;
 ALTER TABLE TableName
 ADD NewColumnName DataType;
 
+// Update 
+UPDATE TABLEName
+SET ColumnName = 99
+
 
 // ------- git -----------
 
