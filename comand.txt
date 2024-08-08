@@ -29,6 +29,13 @@ ADD NewColumnName DataType;
 ALTER TABLE AuditWorkList
 ADD TestingConclusion nvarchar(50) DEFAULT '0';
 
+
+//change the column name
+ALTER TABLE tableName
+DROP COLUMN columnName;
+ALTER TABLE tableName
+ADD ColumnName datatype;
+
 // Update 
 UPDATE TABLEName
 SET ColumnName = 99
