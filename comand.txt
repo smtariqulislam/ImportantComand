@@ -30,6 +30,15 @@ ALTER TABLE AuditWorkList
 ADD TestingConclusion nvarchar(50) DEFAULT '0';
 
 
+// Adding Multiple Coumn in One Table with value.
+ALTER TABLE Table
+ADD 
+    CoumnName1 datetime DEFAULT '0',
+    CoumnName2 datetime  DEFAULT '0',
+    CoumnName3 nvarchar(50)  DEFAULT '0',
+   
+
+
 //change the column name
 ALTER TABLE tableName
 DROP COLUMN columnName;
