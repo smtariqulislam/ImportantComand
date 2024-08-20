@@ -11,6 +11,8 @@ nvm use
 //Windows 11 or 10 cleanup
 press window + R; then write prefetch, temp, %temp%
 
+// screen short
+window + prt scr(laptop)
 
 // ------ SQL-------
 
