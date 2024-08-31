@@ -19,6 +19,11 @@ window + prt scr(laptop)
 // Column Name change
 EXEC sp_rename 'AuditPreviousYearBranch.BranchId', 'BranchName', 'COLUMN';
 
+// Column Name Delete Column
+Alter Table AuditDpInvestigationDetails
+Drop Column ColumnName;
+
+
 // Changing a Column's Data Type or Modifying Properties
 ALTER TABLE TableName
 ALTER COLUMN ColumnName NewDataType;
