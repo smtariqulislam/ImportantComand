@@ -56,33 +56,3 @@ ADD ColumnName datatype;
 UPDATE TABLEName
 SET ColumnName = 99
 
-
-// ------- git -----------
-
-// Fetch the latest branches from the remote repository.
-// ( if exits another developer branch then you use this command.
-git fetch
-
-//Check if the remote branch exists:
-git branch -r
-
-
-// Regular delete (if merged):
-git branch -d feature-branch
-
-// Force delete (if not merged):
-git branch -D feature-branch
-
-
-// base any branch to create another branch.
-git checkout -b new-branch-name feature/-HrEmployeePDFGenerate
-
-
-
-
-
-
-
-
-
-
