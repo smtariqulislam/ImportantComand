@@ -17,3 +17,12 @@ git branch -D feature-branch
 
 // base any branch to create another branch.
 git checkout -b new-branch-name feature/-HrEmployeePDFGenerate
+
+//merge 
+git merge branch_Name
+
+// all commit show
+git log
+
+//
+git status
