@@ -1,18 +1,8 @@
 // All file extensions change in the folder.
 for /R %x in (*.txt) do ren "%x" *.renamed
 
+https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows
 
-// node version control.
-nvm --v
-nvm install 
-nvm use
-
-
-//Windows 11 or 10 cleanup
-press window + R; then write prefetch, temp, %temp%
-
-// screen short
-window + prt scr(laptop)
 
 // ------ SQL-------
 
