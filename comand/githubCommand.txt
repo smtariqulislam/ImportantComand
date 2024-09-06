@@ -3,6 +3,8 @@
 // ( if exits another developer branch then you use this command.
 git fetch
 
+git pull origin branchName
+
 //Check if the remote branch exists:
 git branch -r
 
