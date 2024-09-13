@@ -29,4 +29,8 @@ git log
 //
 git status
 
+//
+git config --global --add safe.directory D:/firstWebsite
+
+
 
