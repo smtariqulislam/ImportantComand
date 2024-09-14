@@ -32,5 +32,8 @@ git status
 //
 git config --global --add safe.directory D:/firstWebsite
 
+// now git track your file.
+git init 
+
 
 
