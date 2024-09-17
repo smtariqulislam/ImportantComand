@@ -46,3 +46,6 @@ ADD ColumnName datatype;
 UPDATE TABLEName
 SET ColumnName = 99
 
+//JOIN
+
+
