@@ -4,6 +4,7 @@ for /R %x in (*.txt) do ren "%x" *.renamed
 https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows
 
 
+
 // ------ SQL-------
 
 // Column Name change
