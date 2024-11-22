@@ -35,5 +35,8 @@ git config --global --add safe.directory D:/firstWebsite
 // now git track your file.
 git init 
 
+// if you have previous repo exits then you can this.
+git config --global --add safe.directory 'D:/Grapes Technology/Umoja-Kenya'
+
 
 
