@@ -39,4 +39,8 @@ git init
 git config --global --add safe.directory 'D:/Grapes Technology/Umoja-Kenya'
 
 
+// edit url
+gi config edit
+
+
 
