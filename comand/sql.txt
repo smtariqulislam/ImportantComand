@@ -49,4 +49,12 @@ SET ColumnName = 99
 
 //JOIN
 
+// table copy
+SELECT 
+      columnName,
+      columnName1,
+      columnName2,
+	  into AuditSpecialInvestigationReportDetails -- new table name
+  FROM [dbo].[AuditSpecialInvestigationReport] -- I want to copy the table.
+
 
