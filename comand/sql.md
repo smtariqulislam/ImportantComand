@@ -4,6 +4,8 @@
 ```cmd
 for /R %x in (*.txt) do ren "%x" *.renamed
 ```
+This command recursively changes all `.txt` file extensions to `.renamed`, starting from the current directory. `%x` is the variable holding the matched file names.
+
 [Source](https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows)
 
 ---
