@@ -83,4 +83,4 @@ FROM [dbo].[AuditSpecialInvestigationReport]; -- Source table
 ### Remove Leading and Trailing Spaces from a Column
 ```sql
 UPDATE dbo.hrEmpayroll
-SET employeeName = LTRIM(RTRIM(employee));
+SET employeeName = LTRIM(RTRIM(employeeName));
