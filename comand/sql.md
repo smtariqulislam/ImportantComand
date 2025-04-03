@@ -84,3 +84,39 @@ FROM [dbo].[AuditSpecialInvestigationReport]; -- Source table
 ```sql
 UPDATE dbo.hrEmpayroll
 SET employeeName = LTRIM(RTRIM(employeeName));
+```
+
+
+
+
+## While Loop
+
+### 
+``` sql
+
+IF NOT EXISTS (SELECT * FROM sys.columns 
+               WHERE object_id = OBJECT_ID('FixTicket') AND name = 'TicketCode')
+BEGIN
+    ALTER TABLE FixTicket
+    ADD TicketCode NVARCHAR(50) NOT NULL DEFAULT 'T000000';
+END
+GO
+
+--- Update existing records with sequential ticket codes
+DECLARE @i INT = 1;
+DECLARE @totalRows INT;
+
+-- Get the total number of rows to update
+SELECT @totalRows = COUNT(*) FROM FixTicket;
+
+-- Update each row with sequential ticket numbers
+WHILE @i <= @totalRows
+BEGIN
+    UPDATE TOP (1) FixTicket
+    SET TicketCode = 'T' + RIGHT('000000' + CAST(@i AS VARCHAR(6)), 6)
+    WHERE TicketCode = 'T000000' OR TicketCode IS NULL;
+    
+    SET @i = @i + 1;
+END
+```
+
