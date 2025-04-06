@@ -120,3 +120,15 @@ BEGIN
 END
 ```
 
+
+
+
+## 001: UPDATE 
+
+### Less Date
+```sql
+UPDATE FixTicket
+SET CloseDate = '1980-12-31 00:00:00.000'
+WHERE CloseDate < '1980-12-31 00:00:00.000';
+```
+
