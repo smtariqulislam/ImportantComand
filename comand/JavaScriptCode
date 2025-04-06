@@ -1,0 +1,16 @@
+data append ar pore use kore hoi.
+
+for (let [key, value] of data.entries()) {
+        console.log("fahad bhai",`${key}: ${value}`);
+      }
+For Print( ki jaitese append korar pore.
+
+Example:
+var data = new FormData();
+      data.append("scoreBoardId", item.scoreBoardId);
+      data.append("columnName", columnName);
+      data.append("newValue", newValue);
+
+for (let [key, value] of data.entries()) {
+        console.log("fahad bhai",`${key}: ${value}`);
+      }
