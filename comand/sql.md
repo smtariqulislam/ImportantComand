@@ -132,3 +132,21 @@ SET CloseDate = '1980-12-31 00:00:00.000'
 WHERE CloseDate < '1980-12-31 00:00:00.000';
 ```
 
+
+
+
+
+## Most Important SP(For Role add)
+
+### 001
+```sql
+DECLARE @Id NVARCHAR(50);
+SELECT @Id = Id 
+FROM AspNetUsers 
+WHERE EmployeeId = '7387C777-84BA-4689-991D-03D6459EB681';
+
+-- Insert into AspNetUserRoles
+INSERT INTO AspNetUserRoles (UserId, RoleId)
+VALUES (@Id, '5b62788e-cafd-4a9c-9437-993fb550972a');
+```
+
