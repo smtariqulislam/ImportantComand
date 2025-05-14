@@ -140,6 +140,9 @@ WHERE CloseDate < '1980-12-31 00:00:00.000';
 
 ### 001
 ```sql
+
+update  AspNetUsers set Role='User' where UserName='254790151959'
+
 DECLARE @Id NVARCHAR(50);
 SELECT @Id = Id 
 FROM AspNetUsers 
