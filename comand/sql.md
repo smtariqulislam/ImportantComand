@@ -148,8 +148,54 @@ SELECT @Id = Id
 FROM AspNetUsers 
 WHERE EmployeeId = '7387C777-84BA-4689-991D-03D6459EB681';
 
--- Insert into AspNetUserRoles
-INSERT INTO AspNetUserRoles (UserId, RoleId)
-VALUES (@Id, '5b62788e-cafd-4a9c-9437-993fb550972a');
+
+
+
+
+
+
+
+
+
+
+## Most Important SP(For Role add)
+
+### 001
+```sql
+
+-- Step 1: Declare variable
+DECLARE @RowCount INT
+
+-- Step 2: Check the row count
+SELECT @RowCount = COUNT(*) FROM OpsERMFTemplate
+
+-- Step 3: If row count is exactly 189, proceed
+IF @RowCount = 189
+BEGIN
+    -- Step 4: Add a new column named RiskId if it doesn't exist
+    IF NOT EXISTS (
+        SELECT * 
+        FROM INFORMATION_SCHEMA.COLUMNS 
+        WHERE TABLE_NAME = 'OpsERMFTemplate' 
+        AND COLUMN_NAME = 'RiskId'
+    )
+    BEGIN
+        ALTER TABLE OpsERMFTemplate ADD RiskId INT
+    END
+
+    -- Step 5: Update the new column with values 1 to 189
+    ;WITH NumberedRows AS (
+        SELECT 
+            *, 
+            ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS RowNum
+        FROM OpsERMFTemplate
+    )
+    UPDATE NumberedRows
+    SET RiskId = RowNum
+END
+ELSE
+BEGIN
+    PRINT 'Warning: Table does not contain exactly 189 rows (' + CAST(@RowCount AS VARCHAR) + ' rows found)'
+END
 ```
 
