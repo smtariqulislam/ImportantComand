@@ -147,14 +147,7 @@ DECLARE @Id NVARCHAR(50);
 SELECT @Id = Id 
 FROM AspNetUsers 
 WHERE EmployeeId = '7387C777-84BA-4689-991D-03D6459EB681';
-
-
-
-
-
-
-
-
+```
 
 
 
