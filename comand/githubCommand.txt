@@ -49,4 +49,9 @@ If your repo uses packed-refs, also clean that:
 git remote prune origin
 
 
+// some problem matic solution.
+rm -f .git/refs/remotes/origin/altaf_dev
+
+
+
 
