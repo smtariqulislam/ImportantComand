@@ -43,4 +43,10 @@ git config --global --add safe.directory 'D:/Grapes Technology/Umoja-Kenya'
 git config edit
 
 
+//
+
+If your repo uses packed-refs, also clean that:
+git remote prune origin
+
+
 
