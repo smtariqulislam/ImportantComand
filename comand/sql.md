@@ -192,3 +192,21 @@ BEGIN
 END
 ```
 
+
+
+## Case SQL 
+
+### 001
+```sql
+
+	Attachment=CASE
+						WHEN (@Attachment<>'') THEN @Attachment
+						ELSE Attachment
+						END
+```
+
+
+
+
+
+
