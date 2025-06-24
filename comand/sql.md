@@ -156,6 +156,25 @@ WHERE EmployeeId = '7387C777-84BA-4689-991D-03D6459EB681';
 ### 001
 ```sql
 
+select * from HrEmployee where EmployeeId='E56624F2-7ADF-4D06-A9E2-48CC9CB56260'
+
+select Id from AspNetUsers where EmployeeId='E56624F2-7ADF-4D06-A9E2-48CC9CB56260'
+
+select * from AspNetRoles where Id='5b62788e-cafd-4a9c-9437-993fb550972a'
+
+select * from AspNetUserRoles where UserId='0674a9d0-50ed-465d-bbd7-abf4b5065f17'
+
+
+
+INSERT INTO AspNetUserRoles ([UserId], [RoleId])
+SELECT Id, '5b62788e-cafd-4a9c-9437-993fb550972a'
+FROM AspNetUsers 
+WHERE EmployeeId = 'E56624F2-7ADF-4D06-A9E2-48CC9CB56260';
+
+```
+### 002
+```sql
+
 -- Step 1: Declare variable
 DECLARE @RowCount INT
 
