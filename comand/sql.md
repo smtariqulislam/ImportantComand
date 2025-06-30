@@ -242,7 +242,8 @@ INNER JOIN UmTanzaniaDb.dbo.AspNetUsers a
 ```
 #### Branch
 
-```Update FixDeskDb.dbo.FixTicket set BranchName=yy.bName
+```
+Update FixDeskDb.dbo.FixTicket set BranchName=yy.bName
 --Select * 
 from (
 
@@ -259,6 +260,7 @@ Select TicketId tid, CreatedId cid ,CreatedBy cby,BranchName from FixDeskDb.dbo.
 ) sub on main.Id=sub.cid
 ) yy
 where TicketId=yy.tid
+
 ```
 
 
