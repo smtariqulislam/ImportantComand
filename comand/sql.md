@@ -230,6 +230,8 @@ END
 ## Practical prolem  Sql I face
 
 ### ticket
+
+#### employeeName and employeeId
 ```UPDATE FixDeskDb.dbo.FixTicket
 SET CreatedBy = a.FullName
 
@@ -237,6 +239,26 @@ SET CreatedBy = a.FullName
 FROM FixDeskDb.dbo.FixTicket
 INNER JOIN UmTanzaniaDb.dbo.AspNetUsers a 
     ON FixDeskDb.dbo.FixTicket.CreatedBy = a.Id;
+```
+#### Branch
+
+```Update FixDeskDb.dbo.FixTicket set BranchName=yy.bName
+--Select * 
+from (
+
+Select sub.tid,main.Id,main.EmployeeName,main.BranchName bName from (
+
+Select a.Id,e.EmployeeId,e.EmployeeName,b.BranchName from UmTanzaniaDb.dbo.AdBranch b
+inner join UmTanzaniaDb.dbo.HrEmployee e on b.BranchId=e.BranchId
+inner join UmTanzaniaDb.dbo.AspNetUsers a on e.EmployeeId=a.EmployeeId
+--where a.id='b478a51f-b35c-45a1-8bc8-594321cae16e'
+)main
+inner join 
+(
+Select TicketId tid, CreatedId cid ,CreatedBy cby,BranchName from FixDeskDb.dbo.FixTicket ft 
+) sub on main.Id=sub.cid
+) yy
+where TicketId=yy.tid
 ```
 
 
