@@ -227,5 +227,20 @@ END
 
 
 
+## Practical prolem  Sql I face
+
+### ticket
+```UPDATE FixDeskDb.dbo.FixTicket
+SET CreatedBy = a.FullName
+
+--select * 
+FROM FixDeskDb.dbo.FixTicket
+INNER JOIN UmTanzaniaDb.dbo.AspNetUsers a 
+    ON FixDeskDb.dbo.FixTicket.CreatedBy = a.Id;
+```
+
+
+
+
 
 
