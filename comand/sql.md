@@ -86,9 +86,6 @@ UPDATE dbo.hrEmpayroll
 SET employeeName = LTRIM(RTRIM(employeeName));
 ```
 
-
-
-
 ## While Loop
 
 ### 
@@ -263,7 +260,15 @@ where TicketId=yy.tid
 
 ```
 
+ #### Account 
+ ```
+select * from ActGL where VoucherNumber='V000645'
+select * from ActGLTrns where GlId='25F01FAF-EADB-47DF-8D53-DAC1160CAE7E'
 
+update ActGLTrns set dr=2000000, cr=2000000 where GlId='25F01FAF-EADB-47DF-8D53-DAC1160CAE7E'
+
+
+```
 
 
 
