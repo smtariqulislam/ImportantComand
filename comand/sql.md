@@ -273,3 +273,52 @@ update ActGLTrns set dr=2000000, cr=2000000 where GlId='25F01FAF-EADB-47DF-8D53-
 
 
 
+#### AspDotNet Insert 
+ ```
+
+INSERT INTO [dbo].[AspNetUsers] ([Id],[UserName],[NormalizedUserName],[Email], [NormalizedEmail],[EmailConfirmed], [PhoneNumber],
+    [PasswordHash],
+    [SecurityStamp],
+    [ConcurrencyStamp],
+    [PhoneNumberConfirmed],
+    [TwoFactorEnabled],
+    [LockoutEnd],
+    [LockoutEnabled],
+    [AccessFailedCount],
+    [CreatedDate],
+    [FullName],
+    [ImageName],
+    [Discriminator],
+    [Role],
+    [EmployeeId]
+)
+VALUES (
+    'E3FC70A3-CC6C-43A0-B987-7CFDEEF82891232',  -- Id
+    '256780308895',             -- UserName
+    '256780308895',             -- NormalizedUserName
+    'peacekainza003@gmail.com',             -- Email
+    'PEACEKAINZA003@GMAIL.COM',             -- NormalizedEmail
+    0,                                       -- EmailConfirmed
+    '256780308895',                          -- PhoneNumber
+    'AQAAAAIAAYagAAAAEGtW1z41jbnsFkpIOEzQCv+F4FHpYF/qBHjpnpTPG7h8hazmQdVbraT6AMd3H9OHUQ==',                                    -- PasswordHash
+    'OLFVFOXG55HQY6AXCR3VXB5RXNZXD4LM',                                 -- SecurityStamp
+    'a8ffce6a-76e8-497e-88cb-67c0ed18976a',                                 -- ConcurrencyStamp
+    0,                                       -- PhoneNumberConfirmed
+    0,                                       -- TwoFactorEnabled
+    NULL,                                    -- LockoutEnd
+    1,                                       -- LockoutEnabled
+    0,                                       -- AccessFailedCount
+    '2025-06-30',                               -- CreatedDate
+    'Kainza Peace',                          -- FullName
+    ' ',                                    -- ImageName
+    'ApplicationUser',                       -- Discriminator (required field, assumed default)
+    'Loan Officer',                              -- Role (assumed)
+    'E3FC70A3-CC6C-43A0-B987-7CFDEEF82891'   -- EmployeeId
+);
+
+```
+
+
+
+
+
