@@ -319,6 +319,20 @@ VALUES (
 ```
 
 
+#### Insert user and role add
+
+```
+
+select * from
+---update
+AspNetUsers 
+--set Role='User' 
+where PhoneNumber in ( '254110147564', '254794657343','254717495890','254799829497')
+
+select * from AspNetRoles where Name='User'
+```
+
+
 
 
 
