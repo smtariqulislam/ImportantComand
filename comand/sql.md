@@ -333,6 +333,17 @@ select * from AspNetRoles where Name='User'
 ```
 
 
+#### relation table to table
+
+```
+ALTER TABLE FixTicketHistory
+ADD CONSTRAINT FK_FixTicketHistory_FixTicket
+FOREIGN KEY (TicketId) REFERENCES FixTicket(TicketId)
+ON DELETE CASCADE;
+
+```
+
+
 
 
 
