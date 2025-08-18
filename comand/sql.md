@@ -344,6 +344,20 @@ ON DELETE CASCADE;
 ```
 
 
+#### Jayhawksafrica need to edit.
+
+```
+select * from ActGL where VoucherNumber='V000666'
+select * from ActGLTrns where GlId='46679CC6-74D2-4FE3-A117-1201C35D824C'
+update ActGL set WorkDate='2025-07-02' where VoucherNumber='V000666'
+update ActGLTrns set Dr=3813133.66 where TrnsId=1616
+update ActGLTrns set Cr=3813133.66 where TrnsId=1617
+
+```
+
+
+
+
 
 
 
