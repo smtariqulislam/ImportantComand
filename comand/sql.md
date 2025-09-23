@@ -355,6 +355,51 @@ update ActGLTrns set Cr=3813133.66 where TrnsId=1617
 
 ```
 
+#### Ticket AM.
+INSERT INTO FixDeskDb.dbo.FixTicketRecommended
+    (TicketId, UserId, Status, Remarks, Assigneedate, RecommenderName, UserType)
+SELECT 
+    t.TicketId,
+    LTRIM(RTRIM(ba.EmployeeId)) AS UserId,
+    'Waiting for approval' AS Status,
+    '' AS Remarks,
+    GETDATE() AS Assigneedate,
+    dbo.GetEmployeeNamenDesignation(LTRIM(RTRIM(ba.EmployeeId))) AS RecommenderName,
+    'Approver' AS UserType
+FROM FixDeskDb.dbo.fixticket t
+INNER JOIN UmUgandaDb.dbo.AdBranch b 
+    ON t.BranchName = b.BranchName
+INNER JOIN UmUgandaDb.dbo.AdArea ara 
+    ON b.AreaId = ara.AreaId
+INNER JOIN UmUgandaDb.dbo.AdAmAssign ba 
+    ON ba.AreaId = b.AreaId
+WHERE t.TicketLevel IN ('checkAm') 
+  AND t.Status NOT IN ('rejected','Sorted & Closed','Closed');
+
+```
+
+#### Ticket BM.
+INSERT INTO FixDeskDb.dbo.FixTicketRecommended
+    (TicketId, UserId, Status, Remarks, Assigneedate, RecommenderName, UserType)
+SELECT 
+    t.TicketId,
+    LTRIM(RTRIM(s.value)) AS UserId,
+    'Waiting for recommendation' AS Status,
+    '' AS Remarks,
+    GETDATE() AS Assigneedate,
+    dbo.GetEmployeeNamenDesignation(LTRIM(RTRIM(s.value))) AS RecommenderName,
+    'Recommender' AS UserType
+	--,CountryCode
+FROM FixDeskDb.dbo.fixticket t
+INNER JOIN UmUgandaDb.dbo.AdBranch b 
+    ON t.BranchName = b.BranchName
+INNER JOIN UmUgandaDb.dbo.AdBmAssign ba 
+    ON ba.BranchId = b.BranchId
+CROSS APPLY STRING_SPLIT(ba.EmployeeId, ',') s
+WHERE t.TicketLevel IN ('checkBm')
+  AND t.Status NOT IN ('rejected','Sorted & Closed','Closed');
+
+```
 
 
 
