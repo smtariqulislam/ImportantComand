@@ -356,6 +356,7 @@ update ActGLTrns set Cr=3813133.66 where TrnsId=1617
 ```
 
 #### Ticket AM.
+```
 INSERT INTO FixDeskDb.dbo.FixTicketRecommended
     (TicketId, UserId, Status, Remarks, Assigneedate, RecommenderName, UserType)
 SELECT 
@@ -379,6 +380,7 @@ WHERE t.TicketLevel IN ('checkAm')
 ```
 
 #### Ticket BM.
+```
 INSERT INTO FixDeskDb.dbo.FixTicketRecommended
     (TicketId, UserId, Status, Remarks, Assigneedate, RecommenderName, UserType)
 SELECT 
