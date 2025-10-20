@@ -403,6 +403,25 @@ WHERE t.TicketLevel IN ('checkBm')
 
 ```
 
+#### audit area review update query.
+```
+UPDATE ard
+SET ard.AreaOfReviewId = ata.AuditAreaId
+FROM AuditRegionReportDetails AS ard
+INNER JOIN AuditAreaOfReview AS aar
+    ON ard.AreaOfReviewId = aar.AreaOfReviewId
+INNER JOIN AuditTestArea AS ata
+    ON aar.AreaOfReviewName = ata.AuditAreaName;
+
+
+	UPDATE aar
+SET aar.AreaOfReviewId = ata.AuditAreaId
+FROM AuditAreaOfReview AS aar
+INNER JOIN AuditTestArea AS ata
+    ON aar.AreaOfReviewName = ata.AuditAreaName;
+
+```
+
 
 
 
