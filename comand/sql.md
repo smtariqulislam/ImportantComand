@@ -443,6 +443,17 @@ INNER JOIN AuditTestArea ata
 
 
 
+#### table kon column insert korte hobe ar na korlei hobe.
+```
+
+SELECT COLUMN_NAME, ORDINAL_POSITION, IS_NULLABLE 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'HrEmployee' 
+ORDER BY ORDINAL_POSITION;
+
+```
+
+
 
 
 
